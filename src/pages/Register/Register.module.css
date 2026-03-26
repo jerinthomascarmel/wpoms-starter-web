@@ -1,0 +1,262 @@
+/* ─── Register Page (reuses Login design tokens) ─────────────────────── */
+:root {
+  --primary-container: #0d1e33;
+  --on-primary-container: #7686a0;
+  --secondary: #745b00;
+  --secondary-fixed-dim: #e5c363;
+  --surface: #f7f9ff;
+  --surface-container-low: #eff4fd;
+  --surface-container-lowest: #ffffff;
+  --on-surface: #161c22;
+  --on-surface-variant: #44474d;
+  --outline-variant: #c4c6cd;
+  --gold-gradient: linear-gradient(135deg, #d4af53 0%, #c4a04d 100%);
+  --font-headline: 'Cormorant Garamond', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+/* ─── Layout ─────────────────────────────────────────────────────────── */
+.registerPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  background-color: var(--surface);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .registerPage {
+    flex-direction: row;
+  }
+}
+
+/* ─── Left: Branding Panel (same as Login) ───────────────────────────── */
+.brandingPanel {
+  position: relative;
+  width: 100%;
+  background-color: var(--primary-container);
+  color: #fff;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .brandingPanel {
+    width: 45%;
+    padding: 4rem 3.5rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brandingPanel {
+    padding: 5rem 5rem 3.5rem;
+  }
+}
+
+.decorativeCircle1,
+.decorativeCircle2 {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decorativeCircle1 {
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  border: 1px solid rgba(229, 195, 99, 0.08);
+  transform: scale(1.5);
+}
+
+.decorativeCircle2 {
+  bottom: -20%;
+  right: -20%;
+  width: 120%;
+  height: 120%;
+  border: 1px solid rgba(229, 195, 99, 0.05);
+  transform: scale(1.25);
+}
+
+.brandingContent {
+  position: relative;
+  z-index: 1;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.logoMark {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--secondary-fixed-dim);
+  background-color: rgba(229, 195, 99, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logoLetter {
+  font-family: var(--font-headline);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--secondary-fixed-dim);
+  line-height: 1;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--secondary-fixed-dim);
+  line-height: 1;
+}
+
+.logoSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--on-primary-container);
+  margin-top: 0.25rem;
+}
+
+.headline {
+  font-family: var(--font-headline);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 2.5rem;
+  max-width: 22rem;
+}
+
+.brandingFooter {
+  position: relative;
+  z-index: 1;
+  padding-top: 2.5rem;
+}
+
+.goldDivider {
+  width: 4rem;
+  height: 1px;
+  background-color: var(--secondary-fixed-dim);
+  margin-bottom: 1rem;
+}
+
+.brandingTagline {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--on-primary-container);
+  margin: 0;
+}
+
+/* ─── Right: Placeholder Panel ───────────────────────────────────────── */
+.formPanel {
+  width: 100%;
+  background-color: var(--surface-container-lowest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .formPanel {
+    width: 55%;
+    padding: 4rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formPanel {
+    padding: 4rem 5rem;
+  }
+}
+
+.formInner {
+  width: 100%;
+  max-width: 26rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.4rem 1.2rem;
+  background-color: rgba(229, 195, 99, 0.12);
+  border: 1.5px solid rgba(229, 195, 99, 0.3);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--secondary);
+}
+
+.formTitle {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  color: var(--on-surface);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.formSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--on-surface-variant);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 3rem;
+  height: 1px;
+  background-color: var(--outline-variant);
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.backLink:hover {
+  gap: 0.6rem;
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-fixed-dim);
+  text-underline-offset: 4px;
+}
