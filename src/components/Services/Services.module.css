@@ -1,0 +1,107 @@
+.services {
+  padding: 6rem 0;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--slate-500);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  padding: 3rem;
+  background-color: var(--surface);
+  border-radius: 1rem;
+  border: 1px solid var(--slate-300);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: var(--gold-500);
+}
+
+.iconWrapper {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.goldIcon {
+  background-color: rgba(200, 168, 75, 0.1);
+  color: var(--gold-500);
+}
+
+.navyIcon {
+  background-color: rgba(13, 30, 51, 0.1);
+  color: var(--navy-900);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  color: var(--slate-600);
+  margin-bottom: 2rem;
+}
+
+.learnMore {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold-600);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s ease;
+}
+
+.learnMore:hover {
+  color: var(--navy-900);
+}

@@ -1,0 +1,126 @@
+.features {
+  padding: 6rem 0;
+  background-color: var(--navy-900);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--slate-400);
+  margin-bottom: 3rem;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.featureItem {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.iconWrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: rgba(200, 168, 75, 0.1);
+  color: var(--gold-500);
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.featureDescription {
+  color: var(--slate-400);
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.statCard {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  color: var(--navy-900);
+}
+
+.statValue {
+  font-size: 2rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--gold-600);
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-500);
+}

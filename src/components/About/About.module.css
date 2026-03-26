@@ -1,0 +1,116 @@
+.about {
+  padding: 6rem 0;
+  background-color: var(--surface);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.experienceBadge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: var(--gold-500);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.years {
+  font-size: 2rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.yearsLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  max-width: 100px;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--slate-600);
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--gold-600);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.statName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-500);
+}
