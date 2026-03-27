@@ -1,0 +1,215 @@
+.welcomeSection {
+  margin-bottom: 3rem;
+}
+
+.welcomeTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: #00040c;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.welcomeSubtitle {
+  color: #7686a0;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .kpiGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.kpiCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-top: 4px solid #e5c363;
+  box-shadow: 0 4px 20px rgba(13, 30, 51, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.kpiCard:hover {
+  transform: translateY(-4px);
+}
+
+.kpiLabel {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #7686a0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.kpiValueRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.kpiValue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #00040c;
+  line-height: 1;
+}
+
+.kpiTrend, .kpiSubtext {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.trendUp {
+  color: #16a34a;
+}
+
+.trendPending {
+  color: #d97706;
+}
+
+.kpiSubtext {
+  color: #7686a0;
+  font-weight: 500;
+}
+
+.kpiIconBox {
+  margin-bottom: 0.25rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1280px) {
+  .contentGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.tableSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #00040c;
+  margin: 0;
+}
+
+.viewAllBtn {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #745b00;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  background: none;
+  border-bottom: 2px solid rgba(116, 91, 0, 0.3);
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.viewAllBtn:hover {
+  border-color: #745b00;
+}
+
+.tableContainer {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(196, 198, 205, 0.1);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 1rem 1.5rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #44474d;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: #eff4fd;
+}
+
+.table td {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid #f8fafc;
+}
+
+.table tr:hover {
+  background-color: rgba(239, 244, 253, 0.5);
+}
+
+.poNumber {
+  font-weight: 600;
+  color: #00040c;
+}
+
+.amount {
+  font-weight: 500;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusPending {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.statusApproved {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.statusRejected {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
