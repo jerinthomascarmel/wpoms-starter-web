@@ -87,7 +87,7 @@ const Register = () => {
     customerPhone: '',
     customerDob: '',
     shippingAddress: '',
-    contactPreference: 'email',
+    primaryContactNumber: '',
   });
 
   const handleChange = (e) => {
@@ -144,83 +144,79 @@ const Register = () => {
 
       <form className={styles.form} onSubmit={(e) => { e.preventDefault(); handleNext(); }}>
         <div className={styles.formCard}>
-          <InputRow>
-            <Field label="Full Name">
-              <div className={styles.inputWrapper}>
-                <input
-                  name="fullName"
-                  type="text"
-                  className={styles.input}
-                  placeholder="e.g. Alistair Thorne"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                />
-                <span className={styles.inputIcon}><User size={18} /></span>
-              </div>
-            </Field>
-            <Field label="Email Address">
-              <div className={styles.inputWrapper}>
-                <input
-                  name="email"
-                  type="email"
-                  className={styles.input}
-                  placeholder="a.thorne@enterprise.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                <span className={styles.inputIcon}><Mail size={18} /></span>
-              </div>
-            </Field>
-          </InputRow>
+          <Field label="Full Name">
+            <div className={styles.inputWrapper}>
+              <input
+                name="fullName"
+                type="text"
+                className={styles.input}
+                placeholder="e.g. Alistair Thorne"
+                value={formData.fullName}
+                onChange={handleChange}
+              />
+              <span className={styles.inputIcon}><User size={18} /></span>
+            </div>
+          </Field>
+          <Field label="Email Address">
+            <div className={styles.inputWrapper}>
+              <input
+                name="email"
+                type="email"
+                className={styles.input}
+                placeholder="a.thorne@enterprise.com"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <span className={styles.inputIcon}><Mail size={18} /></span>
+            </div>
+          </Field>
 
-          <InputRow>
-            <Field label="Password">
-              <div className={styles.inputWrapper}>
-                <input
-                  name="password"
-                  type={showPassword ? 'text' : 'password'}
-                  className={styles.input}
-                  placeholder="••••••••••••"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-                <button type="button" className={styles.toggleBtn} onClick={() => setShowPassword((v) => !v)}>
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                </button>
-              </div>
-              {formData.password && (
-                <div className={styles.strengthWrap}>
-                  <div className={styles.strengthBars}>
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className={styles.strengthBar}
-                        style={{ backgroundColor: i <= strength ? strengthColor : '#dee3ec' }}
-                      />
-                    ))}
-                  </div>
-                  <span className={styles.strengthLabel} style={{ color: strengthColor }}>
-                    {strengthLabel}
-                  </span>
+          <Field label="Password">
+            <div className={styles.inputWrapper}>
+              <input
+                name="password"
+                type={showPassword ? 'text' : 'password'}
+                className={styles.input}
+                placeholder="••••••••••••"
+                value={formData.password}
+                onChange={handleChange}
+              />
+              <button type="button" className={styles.toggleBtn} onClick={() => setShowPassword((v) => !v)}>
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+            {formData.password && (
+              <div className={styles.strengthWrap}>
+                <div className={styles.strengthBars}>
+                  {[1, 2, 3, 4].map((i) => (
+                    <div
+                      key={i}
+                      className={styles.strengthBar}
+                      style={{ backgroundColor: i <= strength ? strengthColor : '#dee3ec' }}
+                    />
+                  ))}
                 </div>
-              )}
-            </Field>
-            <Field label="Confirm Password">
-              <div className={styles.inputWrapper}>
-                <input
-                  name="confirmPassword"
-                  type={showConfirm ? 'text' : 'password'}
-                  className={styles.input}
-                  placeholder="••••••••••••"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                />
-                <button type="button" className={styles.toggleBtn} onClick={() => setShowConfirm((v) => !v)}>
-                  {showConfirm ? <EyeOff size={18} /> : <Eye size={18} />}
-                </button>
+                <span className={styles.strengthLabel} style={{ color: strengthColor }}>
+                  {strengthLabel}
+                </span>
               </div>
-            </Field>
-          </InputRow>
+            )}
+          </Field>
+          <Field label="Confirm Password">
+            <div className={styles.inputWrapper}>
+              <input
+                name="confirmPassword"
+                type={showConfirm ? 'text' : 'password'}
+                className={styles.input}
+                placeholder="••••••••••••"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+              />
+              <button type="button" className={styles.toggleBtn} onClick={() => setShowConfirm((v) => !v)}>
+                {showConfirm ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+          </Field>
 
         </div>
 
@@ -229,7 +225,6 @@ const Register = () => {
             <ArrowLeft size={16} /> Back to Login
           </Link>
           <div className={styles.footerRight}>
-            <span className={styles.stepHint}>Step 1 of {STEPS.length}: Personal Details</span>
             <button type="submit" className={styles.btnPrimary}>
               Next Step <ArrowRight size={18} />
             </button>
@@ -273,11 +268,10 @@ const Register = () => {
       </div>
 
       <footer className={styles.stepFooter}>
-        <button type="button" className={styles.btnSecondary} onClick={handlePrev}>
+        <button type="button" className={styles.backTextBtn} onClick={handlePrev}>
           <ArrowLeft size={18} /> Back
         </button>
         <div className={styles.footerRight}>
-          <span className={styles.stepHint}>Step 2 of {STEPS.length}: Select Role</span>
           <button
             type="button"
             className={styles.btnPrimary}
@@ -452,30 +446,19 @@ const Register = () => {
                     <span className={`${styles.inputIcon} ${styles.inputIconTop}`}><MapPin size={18} /></span>
                   </div>
                 </Field>
-                <div className={styles.preferenceSection}>
-                  <p className={styles.label}>Primary Contact Preference</p>
-                  <div className={styles.radioRow}>
-                    {[
-                      { value: 'email', label: 'Email Communication' },
-                      { value: 'phone', label: 'Phone Call / SMS' },
-                    ].map((opt) => (
-                      <label key={opt.value} className={styles.radioLabel}>
-                        <div className={styles.radioOuter} style={{ borderColor: formData.contactPreference === opt.value ? 'var(--secondary)' : 'var(--outline-variant)' }}>
-                          {formData.contactPreference === opt.value && <div className={styles.radioDot} />}
-                        </div>
-                        <input
-                          type="radio"
-                          name="contactPreference"
-                          value={opt.value}
-                          checked={formData.contactPreference === opt.value}
-                          onChange={handleChange}
-                          style={{ display: 'none' }}
-                        />
-                        <span className={styles.radioText}>{opt.label}</span>
-                      </label>
-                    ))}
+                <Field label="Primary Contact Number">
+                  <div className={styles.inputWrapper}>
+                    <input
+                      name="primaryContactNumber"
+                      type="tel"
+                      className={styles.input}
+                      placeholder="+1 (555) 000-0000"
+                      value={formData.primaryContactNumber}
+                      onChange={handleChange}
+                    />
+                    <span className={styles.inputIcon}><Phone size={18} /></span>
                   </div>
-                </div>
+                </Field>
               </>
             )}
           </div>
@@ -485,18 +468,9 @@ const Register = () => {
               <ArrowLeft size={16} /> Back
             </button>
             <div className={styles.footerRight}>
-              <span className={styles.stepHint}>Step 3 of {STEPS.length}: {role.charAt(0).toUpperCase() + role.slice(1)} Details</span>
               <button type="submit" className={styles.btnPrimary}>
                 Create Account
               </button>
-            </div>
-          </footer>
-
-          <footer className={styles.archiveRef}>
-            <span>Archive Reference: V-{formData.role?.toUpperCase()?.slice(0, 3)}-7729</span>
-            <div className={styles.archiveRefIcons}>
-              <BadgeCheck size={16} />
-              <Lock size={16} />
             </div>
           </footer>
         </form>
