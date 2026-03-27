@@ -93,7 +93,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 .logoMark {
@@ -142,12 +142,12 @@
 
 /* Headline */
 .headline {
-  font-family: var(--font-headline);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 600;
-  color: #fff;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--secondary-fixed-dim);
+  line-height: 1.6;
+  letter-spacing: 0;
   margin-bottom: 2.5rem;
   max-width: 22rem;
 }

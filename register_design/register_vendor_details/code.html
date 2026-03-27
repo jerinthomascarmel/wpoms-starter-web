@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WPOMS - Vendor Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Outfit:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#ffdf92",
+                        "primary": "#00040c",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#e5c363",
+                        "inverse-on-surface": "#ecf1fa",
+                        "surface-container-highest": "#dee3ec",
+                        "tertiary-fixed-dim": "#e2c377",
+                        "on-primary-container": "#7686a0",
+                        "outline": "#74777d",
+                        "surface-tint": "#4f5f77",
+                        "surface-container": "#e9eef7",
+                        "surface-bright": "#f7f9ff",
+                        "secondary-container": "#fdd977",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c4c6cd",
+                        "secondary-fixed": "#ffe08c",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#9d823d",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#594401",
+                        "on-primary-fixed": "#0b1c31",
+                        "primary-fixed": "#d4e3ff",
+                        "inverse-primary": "#b7c7e3",
+                        "on-background": "#161c22",
+                        "surface-container-high": "#e3e8f1",
+                        "on-primary-fixed-variant": "#38485f",
+                        "on-surface-variant": "#44474d",
+                        "inverse-surface": "#2b3138",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#b7c7e3",
+                        "on-secondary-container": "#775e00",
+                        "surface-container-low": "#eff4fd",
+                        "secondary": "#745b00",
+                        "on-surface": "#161c22",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-container": "#271c00",
+                        "surface-dim": "#d5dae3",
+                        "primary-container": "#0d1e33",
+                        "on-secondary-fixed-variant": "#584400",
+                        "background": "#f7f9ff",
+                        "surface": "#f7f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dee3ec",
+                        "tertiary": "#060300"
+                    },
+                    fontFamily: {
+                        "headline": ["Cormorant Garamond", "serif"],
+                        "body": ["Outfit", "sans-serif"],
+                        "label": ["Outfit", "sans-serif"],
+                        "archive": ["Newsreader", "serif"],
+                        "modern": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active {
+            border-left: 4px solid #e5c363;
+            background-color: rgba(229, 195, 99, 0.1);
+        }
+        .editorial-shadow {
+            box-shadow: 0px 4px 20px rgba(13, 30, 51, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background min-h-screen flex items-center justify-center p-6 md:p-12">
+<!-- Main Registration Container -->
+<main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 overflow-hidden editorial-shadow rounded-xl bg-surface-container-lowest">
+<!-- Left Panel: Step Tracker -->
+<aside class="md:col-span-4 bg-primary-container p-10 flex flex-col justify-between">
+<div>
+<div class="mb-16">
+<span class="text-secondary-fixed-dim font-headline text-3xl font-bold tracking-tight">WPOMS</span>
+<p class="text-on-primary-container text-xs font-label uppercase tracking-widest mt-1">Enterprise Management</p>
+</div>
+<nav class="space-y-8">
+<!-- Step 1 -->
+<div class="flex items-center gap-4 group opacity-60">
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center text-on-primary-container font-medium">1</div>
+<div>
+<p class="text-on-primary-container text-xs font-label uppercase tracking-wider">Account Setup</p>
+<p class="text-white font-headline text-lg">Primary Info</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-4 group opacity-60">
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center text-on-primary-container font-medium">2</div>
+<div>
+<p class="text-on-primary-container text-xs font-label uppercase tracking-wider">Business Type</p>
+<p class="text-white font-headline text-lg">Category Selection</p>
+</div>
+</div>
+<!-- Step 3 (Active) -->
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim flex items-center justify-center text-primary-container font-bold shadow-lg">3</div>
+<div>
+<p class="text-secondary-fixed-dim text-xs font-label uppercase tracking-wider">Vendor Details</p>
+<p class="text-white font-headline text-xl">Verification &amp; Identity</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center gap-4 group opacity-30">
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center text-on-primary-container font-medium">4</div>
+<div>
+<p class="text-on-primary-container text-xs font-label uppercase tracking-wider">Final Review</p>
+<p class="text-white font-headline text-lg">Submit Application</p>
+</div>
+</div>
+</nav>
+</div>
+<div class="mt-20">
+<div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+<p class="text-on-primary-container text-sm leading-relaxed italic">"The digital archive of enterprise trust begins with precise documentation."</p>
+</div>
+</div>
+</aside>
+<!-- Right Panel: Vendor Details Form -->
+<section class="md:col-span-8 p-10 md:p-16 bg-surface-bright">
+<header class="mb-12">
+<h1 class="font-headline text-4xl font-semibold text-primary mb-2">Vendor Details</h1>
+<p class="text-on-surface-variant font-body">Please provide the official credentials for your business entity to proceed with the verification process.</p>
+</header>
+<div class="space-y-6">
+<!-- Form Section Card -->
+<div class="bg-surface-container-low p-8 rounded-[10px] border-[1.5px] border-[#E4E9F2] space-y-6">
+<!-- Row 1: Vendor Name + Business Gmail -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-on-surface text-xs font-label font-bold uppercase tracking-wider">Vendor Name</label>
+<input class="w-full h-12 bg-surface-container-lowest border-[1.5px] border-outline-variant rounded-[10px] px-4 focus:ring-2 focus:ring-secondary-fixed-dim/50 focus:border-secondary transition-all outline-none" placeholder="Legal Business Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-on-surface text-xs font-label font-bold uppercase tracking-wider">Business Gmail</label>
+<input class="w-full h-12 bg-surface-container-lowest border-[1.5px] border-outline-variant rounded-[10px] px-4 focus:ring-2 focus:ring-secondary-fixed-dim/50 focus:border-secondary transition-all outline-none" placeholder="example@gmail.com" type="email"/>
+</div>
+</div>
+<!-- Row 2: Address + Place/City -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-on-surface text-xs font-label font-bold uppercase tracking-wider">Address</label>
+<input class="w-full h-12 bg-surface-container-lowest border-[1.5px] border-outline-variant rounded-[10px] px-4 focus:ring-2 focus:ring-secondary-fixed-dim/50 focus:border-secondary transition-all outline-none" placeholder="Street Address, Building No." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-on-surface text-xs font-label font-bold uppercase tracking-wider">Place/City</label>
+<input class="w-full h-12 bg-surface-container-lowest border-[1.5px] border-outline-variant rounded-[10px] px-4 focus:ring-2 focus:ring-secondary-fixed-dim/50 focus:border-secondary transition-all outline-none" placeholder="e.g. New York" type="text"/>
+</div>
+</div>
+<!-- Row 3: Phone + GST Reg No -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-on-surface text-xs font-label font-bold uppercase tracking-wider">Phone</label>
+<input class="w-full h-12 bg-surface-container-lowest border-[1.5px] border-outline-variant rounded-[10px] px-4 focus:ring-2 focus:ring-secondary-fixed-dim/50 focus:border-secondary transition-all outline-none" placeholder="+1 (000) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-on-surface text-xs font-label font-bold uppercase tracking-wider">GST Reg No</label>
+<input class="w-full h-12 bg-surface-container-lowest border-[1.5px] border-outline-variant rounded-[10px] px-4 focus:ring-2 focus:ring-secondary-fixed-dim/50 focus:border-secondary transition-all outline-none" placeholder="Registration ID" type="text"/>
+</div>
+</div>
+<!-- File Upload Box -->
+<div class="space-y-2">
+<label class="text-on-surface text-xs font-label font-bold uppercase tracking-wider">Business Credentials</label>
+<div class="relative group cursor-pointer">
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" type="file"/>
+<div class="w-full py-10 border-2 border-dashed border-outline-variant rounded-[10px] bg-white flex flex-col items-center justify-center space-y-3 group-hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl">cloud_upload</span>
+<div class="text-center">
+<p class="text-primary font-medium">Upload License/Certificate - PDF JPG PNG</p>
+<p class="text-on-surface-variant text-sm">Drag and drop or click to browse files</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-between pt-8">
+<button class="px-8 py-3 text-primary font-label font-semibold uppercase tracking-widest flex items-center gap-2 group hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                        Back
+                    </button>
+<button class="px-12 py-3 bg-gradient-to-br from-secondary-fixed-dim to-secondary text-on-primary-fixed rounded-lg font-label font-bold uppercase tracking-widest shadow-lg shadow-secondary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                        Next
+                    </button>
+</div>
+</div>
+<!-- Footer Decorative -->
+<footer class="mt-16 pt-8 border-t border-surface-container-highest flex justify-between items-center opacity-40">
+<span class="text-xs font-label uppercase tracking-widest">Archive Reference: V-7729</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-base">verified</span>
+<span class="material-symbols-outlined text-base">lock</span>
+</div>
+</footer>
+</section>
+</main>
+<!-- Background Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary-fixed-dim/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-container/5 rounded-full blur-[120px]"></div>
+</div>
+</body></html>

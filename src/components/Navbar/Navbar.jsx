@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +21,12 @@ const Navbar = () => {
         <div className={styles.logo}>
           <span className={styles.logoText}>WPOMS</span>
         </div>
-        
+
         <div className={styles.desktopLinks}>
           {['Features', 'Services', 'About', 'FAQ'].map((item) => (
-            <a 
+            <a
               key={item}
-              href={`#${item.toLowerCase()}`} 
+              href={`#${item.toLowerCase()}`}
               className={styles.link}
             >
               {item}
@@ -34,12 +35,16 @@ const Navbar = () => {
         </div>
 
         <div className={styles.desktopActions}>
-          <button className={styles.signInBtn}>
-            Sign In
-          </button>
-          <button className={`${styles.registerBtn} gold-gradient`}>
-            Register
-          </button>
+          <Link to="/login">
+            <button className={styles.signInBtn}>
+              Sign In
+            </button>
+          </Link>
+          <Link to="/register">
+            <button className={`${styles.registerBtn} gold-gradient`}>
+              Register
+            </button>
+          </Link>
         </div>
 
         <button className={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)}>
@@ -50,9 +55,9 @@ const Navbar = () => {
       {isOpen && (
         <div className={styles.mobileMenu}>
           {['Features', 'Services', 'About', 'FAQ'].map((item) => (
-            <a 
+            <a
               key={item}
-              href={`#${item.toLowerCase()}`} 
+              href={`#${item.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
               className={styles.mobileLink}
             >

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Outfit:wght@300;400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffdf92",
+              "primary": "#00040c",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e5c363",
+              "inverse-on-surface": "#ecf1fa",
+              "surface-container-highest": "#dee3ec",
+              "tertiary-fixed-dim": "#e2c377",
+              "on-primary-container": "#7686a0",
+              "outline": "#74777d",
+              "surface-tint": "#4f5f77",
+              "surface-container": "#e9eef7",
+              "surface-bright": "#f7f9ff",
+              "secondary-container": "#fdd977",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#c4c6cd",
+              "secondary-fixed": "#ffe08c",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#9d823d",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#594401",
+              "on-primary-fixed": "#0b1c31",
+              "primary-fixed": "#d4e3ff",
+              "inverse-primary": "#b7c7e3",
+              "on-background": "#161c22",
+              "surface-container-high": "#e3e8f1",
+              "on-primary-fixed-variant": "#38485f",
+              "on-surface-variant": "#44474d",
+              "inverse-surface": "#2b3138",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#241a00",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#b7c7e3",
+              "on-secondary-container": "#775e00",
+              "surface-container-low": "#eff4fd",
+              "secondary": "#745b00",
+              "on-surface": "#161c22",
+              "on-secondary-fixed": "#241a00",
+              "tertiary-container": "#271c00",
+              "surface-dim": "#d5dae3",
+              "primary-container": "#0d1e33",
+              "on-secondary-fixed-variant": "#584400",
+              "background": "#f7f9ff",
+              "surface": "#f7f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-variant": "#dee3ec",
+              "tertiary": "#060300"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond"],
+              "body": ["Outfit"],
+              "label": ["Outfit"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .serif-heading { font-family: 'Cormorant Garamond', serif; }
+        .sans-body { font-family: 'Outfit', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface sans-body min-h-screen">
+<!-- Main Registration Container -->
+<main class="min-h-screen flex items-center justify-center p-6 md:p-12">
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden bg-surface-container-lowest rounded-xl shadow-2xl shadow-primary-container/5 ring-1 ring-outline-variant/10">
+<!-- Left Panel: Sidebar Branding & Stepper -->
+<div class="lg:col-span-4 bg-primary-container p-8 lg:p-12 flex flex-col justify-between relative overflow-hidden">
+<!-- Abstract Background Ornament -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-16">
+<span class="text-secondary-fixed-dim text-3xl font-bold tracking-tight serif-heading">WPOMS</span>
+<div class="h-4 w-px bg-on-primary-container/30"></div>
+<span class="text-on-primary-container text-xs font-semibold tracking-widest uppercase">Archive</span>
+</div>
+<h2 class="serif-heading text-4xl text-on-primary leading-tight mb-8">Establish your professional presence.</h2>
+<!-- Vertical Stepper -->
+<nav class="space-y-8">
+<!-- Step 1 (Completed) -->
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full border-2 border-secondary-fixed-dim bg-secondary-fixed-dim flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-primary-container font-bold">Step 1</p>
+<p class="text-on-primary font-medium">Account Security</p>
+</div>
+</div>
+<!-- Step 2 (Completed) -->
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full border-2 border-secondary-fixed-dim bg-secondary-fixed-dim flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-primary-container font-bold">Step 2</p>
+<p class="text-on-primary font-medium">Profile Overview</p>
+</div>
+</div>
+<!-- Step 3 (Active) -->
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full border-2 border-secondary-fixed-dim flex items-center justify-center text-secondary-fixed-dim ring-4 ring-secondary-fixed-dim/20">
+<span class="text-sm font-bold">03</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-secondary-fixed-dim font-black">Step 3</p>
+<p class="text-white font-semibold">Manufacturer Details</p>
+</div>
+</div>
+<!-- Step 4 (Future) -->
+<div class="flex items-center gap-4 group opacity-40">
+<div class="w-10 h-10 rounded-full border-2 border-on-primary-container/30 flex items-center justify-center text-on-primary-container">
+<span class="text-sm font-bold">04</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-primary-container font-bold">Step 4</p>
+<p class="text-on-primary-container font-medium">Final Verification</p>
+</div>
+</div>
+</nav>
+</div>
+<div class="relative z-10 mt-12">
+<p class="text-on-primary-container text-sm max-w-xs leading-relaxed">
+                        Your documentation ensures the integrity of the WPOMS enterprise network. All files are encrypted.
+                    </p>
+</div>
+</div>
+<!-- Right Panel: Form Content -->
+<div class="lg:col-span-8 p-8 lg:p-16 flex flex-col justify-center">
+<header class="mb-10">
+<h1 class="serif-heading text-4xl text-primary font-medium mb-2 tracking-tight">Manufacturer Details</h1>
+<p class="text-on-surface-variant font-light">Provide official organizational information for record archival.</p>
+</header>
+<form class="space-y-8">
+<!-- Form Card Section -->
+<div class="bg-surface-container-low p-8 rounded-xl ring-1 ring-outline-variant/20 space-y-6">
+<!-- Row 1: Company Name + Email -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Company Name</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-outline-variant" placeholder="e.g. Heritage Manufacturing Ltd" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Company Email</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-outline-variant" placeholder="corporate@heritage.com" type="email"/>
+</div>
+</div>
+<!-- Row 2: Full Address -->
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Registered Company Address</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-outline-variant" placeholder="Suite 400, Industrial Plaza, London, UK" type="text"/>
+</div>
+<!-- Row 3: Phone + GST -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Company Phone</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-outline-variant" placeholder="+44 20 7946 0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">GST/Business Reg No.</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-outline-variant" placeholder="GB 123 4567 89" type="text"/>
+</div>
+</div>
+<!-- File Upload Box -->
+<div class="space-y-3">
+<label class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Certification Documents</label>
+<div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-10 flex flex-col items-center justify-center bg-surface-container-lowest/50 hover:bg-surface-container-lowest hover:border-secondary transition-all cursor-pointer group">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'opsz' 40;">upload_file</span>
+</div>
+<p class="text-sm font-semibold text-primary">Upload License/Certificate</p>
+<p class="text-xs text-on-surface-variant mt-1">PDF, JPG, or PNG (Max 10MB)</p>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<button class="flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                            Back
+                        </button>
+<button class="flex items-center gap-3 px-10 py-4 bg-gradient-to-br from-secondary-fixed-dim to-secondary rounded-lg text-on-primary-fixed font-bold uppercase tracking-widest text-xs shadow-lg shadow-secondary/20 hover:shadow-xl hover:-translate-y-0.5 transition-all" type="button">
+                            Next Step
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Support Bubble Decoration (Purely Visual) -->
+<div class="fixed bottom-8 right-8">
+<button class="w-14 h-14 bg-primary text-secondary-fixed-dim rounded-full flex items-center justify-center shadow-xl ring-4 ring-white transition-transform hover:scale-110">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</body></html>

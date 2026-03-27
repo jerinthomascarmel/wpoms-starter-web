@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WPOMS - Staff Registration</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Cormorant Garamond & Outfit/Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Outfit:wght@300;400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffdf92",
+              "primary": "#00040c",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e5c363",
+              "inverse-on-surface": "#ecf1fa",
+              "surface-container-highest": "#dee3ec",
+              "tertiary-fixed-dim": "#e2c377",
+              "on-primary-container": "#7686a0",
+              "outline": "#74777d",
+              "surface-tint": "#4f5f77",
+              "surface-container": "#e9eef7",
+              "surface-bright": "#f7f9ff",
+              "secondary-container": "#fdd977",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#c4c6cd",
+              "secondary-fixed": "#ffe08c",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#9d823d",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#594401",
+              "on-primary-fixed": "#0b1c31",
+              "primary-fixed": "#d4e3ff",
+              "inverse-primary": "#b7c7e3",
+              "on-background": "#161c22",
+              "surface-container-high": "#e3e8f1",
+              "on-primary-fixed-variant": "#38485f",
+              "on-surface-variant": "#44474d",
+              "inverse-surface": "#2b3138",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#241a00",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#b7c7e3",
+              "on-secondary-container": "#775e00",
+              "surface-container-low": "#eff4fd",
+              "secondary": "#745b00",
+              "on-surface": "#161c22",
+              "on-secondary-fixed": "#241a00",
+              "tertiary-container": "#271c00",
+              "surface-dim": "#d5dae3",
+              "primary-container": "#0d1e33",
+              "on-secondary-fixed-variant": "#584400",
+              "background": "#f7f9ff",
+              "surface": "#f7f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-variant": "#dee3ec",
+              "tertiary": "#060300"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond", "serif"],
+              "body": ["Outfit", "sans-serif"],
+              "label": ["Outfit", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-gold-gradient {
+        background: linear-gradient(135deg, #e5c363 0%, #745b00 100%);
+      }
+      .editorial-gutter {
+        padding-left: 6rem;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background min-h-screen">
+<!-- Auth Layout Wrapper -->
+<div class="flex min-h-screen overflow-hidden">
+<!-- Left Panel: Sidebar / Navigation Anchor -->
+<aside class="w-[380px] bg-primary-container text-white p-12 flex flex-col relative overflow-hidden shrink-0">
+<!-- Decorative Grain/Texture Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-no-repeat bg-cover" data-alt="subtle dark asphalt texture for high-end editorial paper feel" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXiEDE63M8DKRCxOZdbsw_BozTgXkqGWov02toCHCOSmaQi7hwxV5-AC2ot_zmEdTSQ9C8GWHz2Yxq4HqlLKDzspCSNLTtayM6TuVI2jiTZJDQnNhSbQhPX5oD1M72iBXwopV_iHLX1Ut40YogZoS4NSvHZRkn6xRrxTOXBazj5Zlw-OhMZ1L8VO0RQaNkhyxWcHIy2TMDKEnIzX6h5Du-B5WAhQO2X6nQ6K0PdLstIdrNlK2_9xGyCLBEeVZr9Z5yQxorwzA')"></div>
+<!-- Brand Identity -->
+<div class="relative z-10 mb-20">
+<h1 class="text-[#e5c363] text-4xl font-headline font-bold tracking-tight">WPOMS</h1>
+<p class="text-on-primary-container text-sm font-label uppercase tracking-widest mt-2">Enterprise Management</p>
+</div>
+<!-- Vertical Step Tracker -->
+<nav class="relative z-10 space-y-12">
+<!-- Step 1 -->
+<div class="flex items-center gap-6 group">
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center text-sm font-bold">
+<span class="material-symbols-outlined text-[#e5c363]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="text-xs font-label uppercase text-on-primary-container tracking-widest">Step 01</p>
+<p class="text-lg font-headline font-medium text-white/60">Entity Selection</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-6 group">
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center text-sm font-bold">
+<span class="material-symbols-outlined text-[#e5c363]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="text-xs font-label uppercase text-on-primary-container tracking-widest">Step 02</p>
+<p class="text-lg font-headline font-medium text-white/60">Authentication</p>
+</div>
+</div>
+<!-- Step 3: ACTIVE -->
+<div class="flex items-center gap-6 relative">
+<!-- Active Indicator Line -->
+<div class="absolute -left-12 w-1 h-12 bg-[#e5c363]"></div>
+<div class="w-10 h-10 rounded-full bg-[#e5c363] flex items-center justify-center text-primary-container font-bold shadow-lg shadow-[#e5c363]/20">
+                        03
+                    </div>
+<div>
+<p class="text-xs font-label uppercase text-[#e5c363] tracking-widest">Current Step</p>
+<p class="text-xl font-headline font-semibold text-white">Staff Details</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center gap-6 opacity-40">
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center text-sm font-bold">
+                        04
+                    </div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest">Step 04</p>
+<p class="text-lg font-headline font-medium">Final Review</p>
+</div>
+</div>
+</nav>
+<!-- Footer Branding -->
+<div class="mt-auto relative z-10 pt-12 border-t border-white/5">
+<p class="text-[10px] font-label uppercase tracking-tighter text-on-primary-container/50">
+                    Proprietary Archive System © 2024
+                </p>
+</div>
+</aside>
+<!-- Right Panel: Content Canvas -->
+<main class="flex-grow bg-surface overflow-y-auto">
+<div class="max-w-3xl mx-auto py-24 px-12 lg:px-24">
+<!-- Editorial Header -->
+<header class="mb-12">
+<span class="inline-block px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-label font-bold uppercase tracking-widest text-on-surface-variant mb-6">
+                        Onboarding Procedure
+                    </span>
+<h2 class="text-5xl font-headline font-semibold text-primary tracking-tight mb-4">Staff Details</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-lg">
+                        Finalize your institutional credentials to access the WPOMS secure ledger.
+                    </p>
+</header>
+<!-- Form Section -->
+<section class="space-y-8">
+<!-- Registration Card -->
+<div class="bg-surface-container-low p-10 rounded-[10px] border-[1.5px] border-[#E4E9F2]">
+<form class="space-y-8">
+<!-- Input Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Staff ID Field -->
+<div class="space-y-2">
+<label class="block text-[11px] font-label font-bold uppercase tracking-widest text-secondary" for="staff-id">
+                                        Staff ID
+                                    </label>
+<div class="relative group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-lg">badge</span>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-outline-variant/40 rounded-[10px] py-4 pl-12 pr-4 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline-variant text-primary font-medium" id="staff-id" placeholder="Enter ID" type="text"/>
+</div>
+</div>
+<!-- Temporary Password Field -->
+<div class="space-y-2">
+<label class="block text-[11px] font-label font-bold uppercase tracking-widest text-secondary" for="temp-pwd">
+                                        Temporary Password
+                                    </label>
+<div class="relative group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-lg">lock_open</span>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-outline-variant/40 rounded-[10px] py-4 pl-12 pr-4 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline-variant text-primary font-medium" id="temp-pwd" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Info Note Box -->
+<div class="flex items-start gap-4 p-5 bg-white/50 border border-secondary/10 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-xl">info</span>
+<p class="text-sm text-on-surface-variant leading-snug">
+                                    Staff accounts are provisioned by your Manufacturer. If you do not have your temporary credentials, please contact your regional administrator.
+                                </p>
+</div>
+</form>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-between pt-8">
+<button class="flex items-center gap-2 px-8 py-3 text-sm font-label font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                            Back
+                        </button>
+<button class="bg-gold-gradient text-on-primary-fixed px-12 py-4 rounded-lg text-sm font-label font-bold uppercase tracking-widest shadow-xl shadow-secondary/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-3">
+                            Next Step
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Supplemental Archive Context (Editorial Elements) -->
+<footer class="mt-32 grid grid-cols-2 gap-12 border-t border-outline-variant/20 pt-12">
+<div>
+<h4 class="text-xs font-label font-bold uppercase text-secondary tracking-widest mb-3">Security Protocol</h4>
+<p class="text-xs text-outline leading-relaxed">
+                            All staff interactions within WPOMS are logged and encrypted using military-grade AES-256 protocols to ensure the integrity of the institutional archive.
+                        </p>
+</div>
+<div class="text-right">
+<h4 class="text-xs font-label font-bold uppercase text-secondary tracking-widest mb-3">Support Index</h4>
+<p class="text-xs text-outline leading-relaxed">
+                            Need assistance? Visit our knowledge base or open a priority ticket via the Help Center.
+                        </p>
+</div>
+</footer>
+</div>
+</main>
+</div>
+<!-- Decorative Image Context (Implicit) -->
+<div class="hidden">
+<img data-alt="clean minimal architectural detail of a modern gallery with soft lighting and white marble surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVBWrLRCm1Lg1dD1pxM6RuUeskuT4l0g1glGlULjWr7QLuq7OopwONcdJNho3v55wRT4ThL0cLOwcNevs7cbEm1jrZaWGUFmZdMQsEwHkwF9MSRmtyFQA24VpYzD79iEOmnNOIg80nTxVai3j-9_0yTHLmBwVe1faIVkYYWdbMoMFqohjNKOq62-vSVPI_8GCUSUqcz1DPFjWkx3LKuwy-vmsL1iN3VOgy2qz_LocvtTwjVyCZhY3utRyzx2GhkCvCRSGF3eo"/>
+</div>
+</body></html>

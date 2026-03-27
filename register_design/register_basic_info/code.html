@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WPOMS - Create Your Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Outfit:wght@300;400;500;600&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffdf92",
+              "primary": "#00040c",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e5c363",
+              "inverse-on-surface": "#ecf1fa",
+              "surface-container-highest": "#dee3ec",
+              "tertiary-fixed-dim": "#e2c377",
+              "on-primary-container": "#7686a0",
+              "outline": "#74777d",
+              "surface-tint": "#4f5f77",
+              "surface-container": "#e9eef7",
+              "surface-bright": "#f7f9ff",
+              "secondary-container": "#fdd977",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#c4c6cd",
+              "secondary-fixed": "#ffe08c",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#9d823d",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#594401",
+              "on-primary-fixed": "#0b1c31",
+              "primary-fixed": "#d4e3ff",
+              "inverse-primary": "#b7c7e3",
+              "on-background": "#161c22",
+              "surface-container-high": "#e3e8f1",
+              "on-primary-fixed-variant": "#38485f",
+              "on-surface-variant": "#44474d",
+              "inverse-surface": "#2b3138",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#241a00",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#b7c7e3",
+              "on-secondary-container": "#775e00",
+              "surface-container-low": "#eff4fd",
+              "secondary": "#745b00",
+              "on-surface": "#161c22",
+              "on-secondary-fixed": "#241a00",
+              "tertiary-container": "#271c00",
+              "surface-dim": "#d5dae3",
+              "primary-container": "#0d1e33",
+              "on-secondary-fixed-variant": "#584400",
+              "background": "#f7f9ff",
+              "surface": "#f7f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-variant": "#dee3ec",
+              "tertiary": "#060300"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond", "serif"],
+              "body": ["Outfit", "sans-serif"],
+              "label": ["Outfit", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #e5c363 0%, #745b00 100%);
+        }
+        .editorial-shadow {
+            box-shadow: 0px 4px 20px rgba(13, 30, 51, 0.06);
+        }
+        input:focus {
+            outline: none !important;
+            border-color: #e5c363 !important;
+            --tw-ring-color: transparent !important;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex items-center justify-center p-6 md:p-12">
+<!-- Registration Container -->
+<main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-[320px_1fr] bg-surface-container-lowest rounded-xl editorial-shadow overflow-hidden min-h-[700px]">
+<!-- Left Sidebar: Step Tracker -->
+<aside class="bg-primary-container p-10 flex flex-col justify-between relative overflow-hidden">
+<!-- Decorative Branding Element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed-dim/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div class="relative z-10">
+<div class="mb-16">
+<h2 class="text-secondary-fixed-dim text-3xl font-bold font-headline tracking-tight">WPOMS</h2>
+<p class="text-on-primary-container text-xs font-label uppercase tracking-widest mt-1 opacity-70">Enterprise Management</p>
+</div>
+<nav class="space-y-12 relative">
+<!-- Progress Line -->
+<div class="absolute left-[11px] top-2 bottom-2 w-[1px] bg-white/10"></div>
+<!-- Step 1 (Active) -->
+<div class="flex items-center gap-6 group relative">
+<div class="w-6 h-6 rounded-full gold-gradient flex items-center justify-center ring-4 ring-secondary-fixed-dim/20 relative z-10">
+<span class="text-[10px] font-bold text-on-primary-fixed">1</span>
+</div>
+<div>
+<p class="text-secondary-fixed-dim font-semibold text-sm">Step 1</p>
+<p class="text-white text-lg font-headline">Basic Info</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-6 group relative">
+<div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center relative z-10 group-hover:bg-white/20 transition-colors">
+<span class="text-[10px] font-bold text-white/40">2</span>
+</div>
+<div>
+<p class="text-white/40 font-semibold text-sm">Step 2</p>
+<p class="text-white/40 text-lg font-headline">Select Role</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-6 group relative">
+<div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center relative z-10">
+<span class="text-[10px] font-bold text-white/40">3</span>
+</div>
+<div>
+<p class="text-white/40 font-semibold text-sm">Step 3</p>
+<p class="text-white/40 text-lg font-headline">Role Details</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center gap-6 group relative">
+<div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center relative z-10">
+<span class="text-[10px] font-bold text-white/40">4</span>
+</div>
+<div>
+<p class="text-white/40 font-semibold text-sm">Step 4</p>
+<p class="text-white/40 text-lg font-headline">Review &amp; Submit</p>
+</div>
+</div>
+</nav>
+</div>
+<div class="relative z-10 mt-12 pt-8 border-t border-white/5">
+<div class="flex items-center gap-3">
+<img alt="Executive headshot" class="w-10 h-10 rounded-full object-cover border border-white/20" data-alt="professional male executive in a sharp navy suit with neutral office background, soft cinematic lighting, corporate portrait style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdzwEy2ZvpE1cYvcqtkshrvmQlzHNe53oUfZSJVwfyHJ3NfaYe0kzXbc9b8w8bVifHGHbIQtzgeaAd-_MmRhB5wcpKlQK_xC2B_EaoZEUuNZn0XmnXAhYlltRh2vhyOiUawD5YyYx2Wpy87jF26XTEVMSb0LDkQDBdion7O1aSte4HnX4L2ijJ5x_AAXNO1A61qwVEn_PtjdsGcJMxeIoARG2lktVq2K0009EJtmZ5iz8ziGKhco76ezx6iqVZTb6ezHEuObY"/>
+<div>
+<p class="text-white text-xs font-semibold">WPOMS Support</p>
+<p class="text-white/40 text-[10px]">Concierge Assistance</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Panel: Content -->
+<section class="p-12 md:p-20 flex flex-col h-full bg-surface-bright">
+<!-- Top Progress Header -->
+<header class="mb-16">
+<div class="flex justify-between items-end mb-4">
+<span class="text-on-surface-variant font-label text-xs font-semibold tracking-widest uppercase">Step 1 of 4</span>
+<span class="text-secondary font-semibold text-sm">25% Complete</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full w-1/4 gold-gradient rounded-full"></div>
+</div>
+</header>
+<!-- Main Form Content -->
+<div class="flex-grow max-w-2xl">
+<h1 class="text-5xl font-headline text-primary mb-2">Create Your Account</h1>
+<p class="text-on-surface-variant text-lg mb-12">Begin your archival journey by providing your primary identity details.</p>
+<form class="space-y-8">
+<!-- Row 1: Name & Email -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-[#E4E9F2] rounded-[10px] px-5 py-4 text-on-surface placeholder:text-outline-variant transition-all hover:bg-surface-container-low focus:bg-surface-container-lowest" placeholder="e.g. Alistair Thorne" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-[#E4E9F2] rounded-[10px] px-5 py-4 text-on-surface placeholder:text-outline-variant transition-all hover:bg-surface-container-low focus:bg-surface-container-lowest" placeholder="a.thorne@enterprise.com" type="email"/>
+</div>
+</div>
+<!-- Row 2: Passwords -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-on-surface-variant">Password</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-[#E4E9F2] rounded-[10px] px-5 py-4 text-on-surface placeholder:text-outline-variant transition-all hover:bg-surface-container-low focus:bg-surface-container-lowest" placeholder="••••••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+<!-- Strength Indicator -->
+<div class="pt-2">
+<div class="flex gap-1 mb-1.5">
+<div class="h-1 flex-1 rounded-full bg-secondary"></div>
+<div class="h-1 flex-1 rounded-full bg-secondary"></div>
+<div class="h-1 flex-1 rounded-full bg-secondary"></div>
+<div class="h-1 flex-1 rounded-full bg-surface-container-highest"></div>
+</div>
+<p class="text-[10px] text-secondary font-medium">Strong: Includes symbols and varied casing</p>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-wider text-on-surface-variant">Confirm Password</label>
+<input class="w-full bg-surface-container-lowest border-[1.5px] border-[#E4E9F2] rounded-[10px] px-5 py-4 text-on-surface placeholder:text-outline-variant transition-all hover:bg-surface-container-low focus:bg-surface-container-lowest" placeholder="••••••••••••" type="password"/>
+</div>
+</div>
+<!-- Terms Checkbox -->
+<div class="flex items-start gap-3 pt-4">
+<div class="relative flex items-center h-5">
+<input class="w-5 h-5 rounded border-outline-variant text-secondary focus:ring-secondary/50" id="terms" type="checkbox"/>
+</div>
+<label class="text-sm text-on-surface-variant leading-tight" for="terms">
+                            I agree to the <a class="text-secondary font-semibold hover:underline" href="#">Terms of Service</a> and <a class="text-secondary font-semibold hover:underline" href="#">Privacy Policy</a> governing the archival management system.
+                        </label>
+</div>
+</form>
+</div>
+<!-- Bottom Navigation Actions -->
+<footer class="mt-20 flex items-center justify-between border-t border-surface-container-high pt-10">
+<button class="px-8 py-3 rounded-lg font-label font-bold uppercase tracking-widest text-on-surface-variant border-[1.5px] border-outline-variant hover:bg-surface-container-low transition-all duration-300">
+                    Back
+                </button>
+<div class="flex items-center gap-8">
+<span class="hidden md:block text-xs font-label text-on-surface-variant italic opacity-60">Step 1 of 4: Personal Details</span>
+<button class="gold-gradient text-on-primary-fixed px-10 py-4 rounded-lg font-label font-bold uppercase tracking-widest editorial-shadow hover:brightness-110 active:scale-95 transition-all duration-300 flex items-center gap-2">
+                        Next Step
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+</section>
+</main>
+</body></html>
