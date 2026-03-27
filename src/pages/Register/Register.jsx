@@ -289,12 +289,6 @@ const Register = () => {
           </button>
         </div>
       </footer>
-
-      <footer className={styles.archivesFooter}>
-        <div className={styles.archivesDivider} />
-        <span className={styles.archivesText}>Archives of Excellence</span>
-        <div className={styles.archivesDivider} />
-      </footer>
     </div>
   );
 
